@@ -24,7 +24,7 @@ app.use(express.json());
 //why comment out helmet??=>failed To Load Resource error//images were not showing
 app.use(morgan("common"));
 
-const PORT = process.env.PORT || 8800;
+const PORT = process.env.PORT || 5000;
 
 //connect to database
 mongoose.connect(process.env.MONGO_URI, {
@@ -59,9 +59,7 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 });
 
 
-app.use("/", (req, res) => {
-    res.send("Welcome to social media app!!!")
-});
+
 
 
 
