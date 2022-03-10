@@ -76,13 +76,11 @@ app.use("/api/comments", commentsRoute);
 
 
 //imp => first req then res QS
-app.get("/", (req, res) => {
+app.use("/", (req, res) => {
     res.send("Welcome to Home Page!!!");
 })
 
-app.get("/users", (req, res) => {
-    res.send("Welcome to user Page!!!");
-})
+
 
 
 
