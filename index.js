@@ -59,7 +59,9 @@ app.post("/api/upload", upload.single("file"), (req, res) => {
 });
 
 
-
+app.use("/", (req, res) => {
+    res.send("Welcome to social media app!!!")
+})
 
 
 
